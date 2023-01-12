@@ -3,11 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/css/build.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>API com Axios</title>
+    <script type="module" src="./src/script.js"></script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/script.js"></script>
+  <body class="bg-sky-800">
+    <nav class="p-4">
+      <div
+        class="border-3 rounded-xl border-sky-800 bg-gradient-to-t from-sky-800 to-sky-400"
+      >
+        <a class="flex justify-center items-center">
+          <img
+            class="relative h-48 w-36 mx-4"
+            src="/src/assets/1317292983.svg"
+            alt="logo"
+          />
+          <div class="text-8xl text-white">Antistar</div>
+        </a>
+      </div>
+      <div
+        class="text-white grid justify-items-center grid-flow-col gap-x-2 text-lg border rounded-sm border-sky-400"
+      >
+        <a href="" class="hover:underline">Categorias</a>
+        <a href="" class="hover:underline">Ofertas</a>
+        <a href="" class="hover:underline">Contato</a>
+        <a href="" class="hover:underline">Cartão Anti</a>
+        <a href="" class="hover:underline">Login</a>
+      </div>
+    </nav>
+
+    <section>
+      <h3 id="result" class="p-4 font-bold text-white">
+        Resultados encontrados:
+      </h3>
+      <br />
+      <div
+        class="grid grid-cols-4 gap-4 p-4 m-auto"
+        className="produtos"
+        id="produtos"
+      ></div>
+    </section>
+
+    <footer>
+      <span class="p-4 text-white text-2xl flex justify-center"
+        >Desenvolvido por pixies0</span
+      >
+    </footer>
   </body>
 </html>
