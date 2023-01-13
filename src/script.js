@@ -30,8 +30,8 @@ function showProdutos() {
     divsProd =
       divsProd +
       `
-    <div class="text-white grid place-items-center border-4 border-sky-400 rounded-xl bg-sky-600 p-4" className="produto-item">
-    <img src="${produto.thumbnail}" class="rounded-lg w-60 h-60" alt="" />
+    <div class="text-white grid place-items-center border-4 border-sky-400 rounded-xl gap-4 bg-sky-600 p-4 " className="produto-item">
+    <img src="${produto.thumbnail}" class="rounded-lg h-30 w-30 sm:w-60 sm:h-60" alt="" />
     <h5>${produto.title}</h5>
     <div class="p-4" className="produto-preco">
       <p>R$${produto.price}</p>
