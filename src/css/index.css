@@ -1,0 +1,24 @@
+/* src/css/styles.css */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    color: white; /* Cor do ícone */
+    font-size: 24px; /* Tamanho do ícone */
+  }
+
+  @media (max-width: 640px) {
+    .hamburger {
+      display: block; /* Exibe o ícone em telas menores que 640px */
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .logo-text {
+      display: none;
+    }
+  }

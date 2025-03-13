@@ -22,6 +22,7 @@
     <title>API com Axios</title>
     <script type="module" src="./src/js/scriptProdutos.js"></script>
     <script type="module" src="./src/js/hamburgMenu.js"></script>
+    <script type="module" src="./src/js/produto.js"></script>
   </head>
   <body class="bg-sky-800">
     <nav class="p-4">
@@ -41,7 +42,7 @@
         <i class="fa-regular fa-square-caret-down"></i>
       </div>
         <div
-        class="text-white grid justify-items-center grid-flow-col gap-x-2 text-sm sm:text-xl border rounded-lg border-sky-400 nav-links"
+        class="text-white grid justify-items-center grid-flow-col gap-x-2 text-sm sm:text-xl border rounded-sm border-sky-400 nav-links"
         id="navLinks"
       >
         <a href class="hover:underline">Categorias</a>
@@ -52,22 +53,32 @@
       </div>
     </nav>
 
-    <div class="container px-4">
-      <div className="sideFilters"></div>
-      <div className="mainContainer"></div>
+    <nav class="p-4">
+        <a href="index.html" class="text-2xl text-white">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+    </nav>
+    <div class="container m-auto p-2 text-white">
+        <div id="produtoDetalhes" class="grid md:grid-cols-2 p-4 rounded-lg bg-sky-600">
+            <div class="justify-self-center">
+                <img id="produtoImagem" class="rounded-lg w-full" src="" alt="Produto">
+            </div>
+            <div>
+                <h1 id="produtoTitulo" class="text-3xl font-bold"></h1>
+                <p id="produtoDescricao" class="mt-2"></p>
+                <p class="mt-2"><strong>Marca:</strong> <span id="produtoMarca"></span></p>
+                <p class="mt-2"><strong>Preço:</strong> R$<span id="produtoPreco"></span></p>
+                <p class="mt-2"><strong>Estoque:</strong> <span id="produtoEstoque"></span></p>
+                <button class="mt-2 p-4 border rounded-lg bg-blue-500 hover:bg-orange-600" className="btn-add">
+                    <i class="fa-solid fa-cart-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div id="avaliacoes" class="m-8 p-4 border rounded-lg bg-sky-700 text-center">
+            <h2 class="text-2xl font-bold mb-4">Avaliações dos Clientes</h2>
+            <div id="listaAvaliacoes" class="m-4 text-left"></div>
+        </div>
     </div>
-
-    <section class>
-      <h3 id="result" class="mx-8 font-bold text-sm sm:text-lg text-white">
-        Resultados encontrados:
-      </h3>
-      <br />
-      <div
-        class="grid md:grid-cols-4 sm:grid-cols-2 gap-8 sm:gap-4 px-4 -my-2"
-        className="produtos"
-        id="produtos"
-      ></div>
-    </section>
 
     <footer>
       <span class="p-4 text-white text-2xl flex justify-center"
